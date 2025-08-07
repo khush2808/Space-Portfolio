@@ -7,8 +7,9 @@ const Projects = () => {
       className="flex flex-col items-center justify-center py-20"
       id="projects"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
         My Projects
+
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
@@ -18,23 +19,18 @@ const Projects = () => {
           description="Storify is a versatile storage app where users can store, rename, delete, share, and organize all types of files. With features like sorting and file management, it makes organizing your digital assets easy and efficient."
           link="https://storifyy.vercel.app"
           key="2"
+          github="https://github.com/khush2808/storify"
         />
 
-        
-        <ProjectCard
-          src="/krishiseva.png"
-          title="Krishi Seva"
-          description="An online marketplace designed for farmers, featuring tools like disease prediction, discussion forums, and a chatbot for agricultural support."
-          link="https://krishi-seva-web-design-second-repo.vercel.app/"
-          key="4"
-        />
+
 
         <ProjectCard
           src="/syncstream.png"
           title="SyncStream"
           description="SyncStreamis a video calling platform enabling seamless virtual meetings with features like screen sharing, chat, and secure video calls."
-          link="https://syncstream-ten.vercel.app/"
+          link="https://sync-stream-app.vercel.app/"
           key="5"
+          github="https://github.com/khush2808/sync-stream-app"
         />
         <ProjectCard
           src="/cryptotracker.png"
@@ -64,20 +60,8 @@ const Projects = () => {
           link="https://khushshah.vercel.app"
           key="9"
         />
-        <ProjectCard
-          src="/moviestream.png"
-          title="MovieStream"
-          description="A movie streaming platform that offers users the ability to search for and watch trailers of their favorite films, with a clean, user-friendly interface."
-          link="https://moviestream-wine.vercel.app"
-          key="10"
-        />
-        <ProjectCard
-          src="/interviewiq.png"
-          title="InterviewIQ"
-          description="A platform to help job seekers prepare for technical interviews by practicing coding challenges and getting personalized feedback."
-          link="https://interviewiq.vercel.app/"
-          key="11"
-        />
+              <p className="text-center text-gray-500">(Not updated check my github for latest projects)</p>
+
       </div>
     </div>
   );
