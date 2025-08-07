@@ -13,13 +13,6 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
         <ProjectCard
-          src="/taskbridge.png"
-          title="TaskBridge"
-          description="TaskBridge is a project management platform for creating projects, assigning tasks, and tracking progress. With features like task prioritization, timelines, and drag-and-drop boards, it helps teams stay organized."
-          link="https://task-bridge.vercel.app"
-          key="1"
-        />
-        <ProjectCard
           src="/storify.png"
           title="Storify"
           description="Storify is a versatile storage app where users can store, rename, delete, share, and organize all types of files. With features like sorting and file management, it makes organizing your digital assets easy and efficient."
@@ -27,13 +20,7 @@ const Projects = () => {
           key="2"
         />
 
-        <ProjectCard
-          src="/linkup.png"
-          title="LinkUp"
-          description="A social media platform where users can follow friends, post updates, and engage with stories. Built using Next.js, Prisma, and PostgreSQL."
-          link="https://link-up-silk.vercel.app"
-          key="3"
-        />
+        
         <ProjectCard
           src="/krishiseva.png"
           title="Krishi Seva"
@@ -53,14 +40,14 @@ const Projects = () => {
           src="/cryptotracker.png"
           title="Crypto Tracker"
           description="A web app to track cryptocurrency prices in real time, with features to view price history and set custom alerts for market changes."
-          link="https://cryptotracker-lovat.vercel.app/"
+          link="https://crypto-tracker-khush.vercel.app/"
           key="6"
         />
         <ProjectCard
           src="/financemate.png"
           title="FinanceMate"
           description="A personal finance tool that helps users manage their budgets, track expenses, and visualize spending habits through easy-to-read charts."
-          link="https://financemate.vercel.app/"
+          link="https://finance-mate.vercel.app/"
           key="7"
         />
         <ProjectCard
