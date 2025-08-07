@@ -49,6 +49,17 @@ const Navbar = () => {
       />
     </a>
   ))}
+  <a href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view" target="_blank" rel="noopener noreferrer" aria-label="Resume" className="flex items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="w-6 h-6 text-gray-300 hover:text-white transition"
+      aria-hidden="true"
+    >
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM14 9V3.5L19.5 9H14z" />
+    </svg>
+  </a>
 </div>
 
       </div>

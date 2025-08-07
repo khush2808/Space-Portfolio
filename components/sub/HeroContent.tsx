@@ -8,6 +8,7 @@ import {
   slideInFromTop,
 } from "@/utils/motion";
 import { ArrowRightIcon, SparklesIcon } from "@heroicons/react/24/solid";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 
 const HeroContent = () => {
@@ -51,7 +52,7 @@ const HeroContent = () => {
         >
           I&apos;m a Full Stack Software developer with experience in Website development. Check out my projects and skills.
         </motion.p>
-        <motion.a
+        {/* <motion.a
           href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
           target="_blank"
           rel="noopener noreferrer"
@@ -59,7 +60,8 @@ const HeroContent = () => {
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           My Resume
-        </motion.a>
+          <FaExternalLinkAlt className="inline-block ml-2 align-middle" size={14} />
+        </motion.a> */}
 
         
       </div>
