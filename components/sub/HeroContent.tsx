@@ -7,7 +7,7 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const HeroContent = () => {
@@ -52,13 +52,13 @@ const HeroContent = () => {
           I&apos;m a Full Stack Software developer with experience in Website development. Check out my projects and skills.
         </motion.p>
         <motion.a
-          href="https://www.linkedin.com/in/khush2808"
+          href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
           target="_blank"
           rel="noopener noreferrer"
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
+          My Resume
         </motion.a>
 
         
