@@ -52,14 +52,16 @@ const HeroContent = () => {
           I&apos;m a Full Stack Software developer with experience in Website development. Check out my projects and skills.
         </motion.p>
         <motion.a
-        href="https://www.linkedin.com/in/khush2808"
-        target="_blank"
-
+          href="https://www.linkedin.com/in/khush2808"
+          target="_blank"
+          rel="noopener noreferrer"
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           Learn More!
         </motion.a>
+
+        
       </div>
 
       <motion.div

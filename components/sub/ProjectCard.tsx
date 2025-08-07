@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Socials } from "@/constants";
+
 
 interface Props {
   src: string;
@@ -13,9 +13,7 @@ interface Props {
 
 const ProjectCard = ({ src, title, description, link, github }: Props) => {
   const githubProfileLink =
-    github ||
-    Socials.find((s) => s.name.toLowerCase() === "github")?.href ||
-    "https://github.com/khush2808";
+    github || "https://github.com/khush2808";
   return (
     <div
       role="link"
