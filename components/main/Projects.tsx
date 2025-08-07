@@ -38,6 +38,7 @@ const Projects = () => {
           description="A web app to track cryptocurrency prices in real time, with features to view price history and set custom alerts for market changes."
           link="https://crypto-tracker-khush.vercel.app/"
           key="6"
+          github="https://github.com/khush2808/crypto-tracker-app"
         />
         <ProjectCard
           src="/financemate.png"
@@ -45,6 +46,7 @@ const Projects = () => {
           description="A personal finance tool that helps users manage their budgets, track expenses, and visualize spending habits through easy-to-read charts."
           link="https://finance-mate.vercel.app/"
           key="7"
+          github="https://github.com/khush2808/finance-mate"
         />
         <ProjectCard
           src="/tomato.png"
@@ -52,6 +54,7 @@ const Projects = () => {
           description="A food delivery app that allows users to browse menus, place orders, and track their food in real time. Offers smooth navigation and user-friendly design."
           link="https://food-delivery-frontend-no0l.onrender.com/"
           key="8"
+          github="https://github.com/khush2808/zomato-clone"
         />
         <ProjectCard
           src="/portfolio.png"
@@ -59,6 +62,7 @@ const Projects = () => {
           description="A personal portfolio website showcasing my projects, skills, and experiences. Designed to highlight my work in web development and software engineering."
           link="https://khushshah.vercel.app"
           key="9"
+          github="https://github.com/khush2808/space-portfolio"
         />
               <p className="text-center text-gray-500">(Not updated check my github for latest projects)</p>
 
