@@ -40,7 +40,14 @@ const Navbar = () => {
 
         <div className="hidden sm:flex flex-row gap-5">
   {Socials.map((social) => (
-    <a href={social.href} target="_blank" key={social.name}>
+    <a
+      href={social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      key={social.name}
+      aria-label={social.name}
+      title={social.name}
+    >
       <Image
         src={social.src}
         alt={social.name}
@@ -49,16 +56,17 @@ const Navbar = () => {
       />
     </a>
   ))}
-  <a href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view" target="_blank" rel="noopener noreferrer" aria-label="Resume" className="flex items-center">
+   <a href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume" className="flex items-center gap-2 group">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-6 h-6 text-gray-300 hover:text-white transition"
+       className="w-6 h-6 text-gray-300 group-hover:text-white transition"
       aria-hidden="true"
     >
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM14 9V3.5L19.5 9H14z" />
     </svg>
+     <span className="text-sm text-gray-300 group-hover:text-white transition hidden md:inline">Resume</span>
   </a>
 </div>
 
