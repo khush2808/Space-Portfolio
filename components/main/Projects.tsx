@@ -27,7 +27,7 @@ const Projects = () => {
         <ProjectCard
           src="/syncstream.png"
           title="SyncStream"
-          description="SyncStreamis a video calling platform enabling seamless virtual meetings with features like screen sharing, chat, and secure video calls."
+          description="SyncStream is a video calling platform enabling seamless virtual meetings with features like screen sharing, chat, and secure video calls."
           link="https://sync-stream-app.vercel.app/"
           key="5"
           github="https://github.com/khush2808/sync-stream-app"
