@@ -65,7 +65,7 @@ const Projects = () => {
         />
         <div className="col-span-full flex flex-col items-center space-y-4 mt-4">
           <p className="text-center text-gray-500 text-sm max-w-2xl">
-            Looking for more? This list highlights a subset. Visit my GitHub profile for all repositories and more recent work.
+            Looking for more? This list highlights a subset. Visit my GitHub profile for all repositories, more recent work, and latest projects.
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <a
