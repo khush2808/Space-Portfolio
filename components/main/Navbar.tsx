@@ -35,6 +35,9 @@ const Navbar = () => {
             <a href="#projects" className="cursor-pointer">
               Projects
             </a>
+            {/* <a href="#experience" className="cursor-pointer">
+              Experience
+            </a> */}
           </div>
         </div>
 
@@ -56,7 +59,7 @@ const Navbar = () => {
       />
     </a>
   ))}
-   <a href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume" className="flex items-center gap-2 group">
+   {/* <a href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume" className="flex items-center gap-2 group">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -67,7 +70,7 @@ const Navbar = () => {
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM14 9V3.5L19.5 9H14z" />
     </svg>
      <span className="text-sm text-gray-300 group-hover:text-white transition hidden md:inline">Resume</span>
-  </a>
+  </a> */}
 </div>
 
       </div>

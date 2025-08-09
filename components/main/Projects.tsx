@@ -8,8 +8,7 @@ const Projects = () => {
       id="projects"
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
-        My Projects
-
+        Featured Projects
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
@@ -64,20 +63,37 @@ const Projects = () => {
           key="9"
           github="https://github.com/khush2808/space-portfolio"
         />
-        <div className="col-span-full flex flex-col items-center space-y-1">
-          <p className="text-center text-gray-500">
-            (Not updated, check my github for latest projects)
+        <div className="col-span-full flex flex-col items-center space-y-4 mt-4">
+          <p className="text-center text-gray-500 text-sm max-w-2xl">
+            Looking for more? This list highlights a subset. Visit my GitHub profile for all repositories and more recent work.
           </p>
-          <a
-            href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Resume"
-            title="Resume"
-            className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-          >
-            <span className="text-center text-gray-500">My resume: 📑</span>
-          </a>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <a
+              href="https://github.com/khush2808?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-2 border border-purple-600/40 text-purple-300 hover:bg-purple-600/10 transition"
+            >
+              <img src="/github.svg" alt="GitHub" className="w-4 h-4 opacity-80" />
+              View All Repos
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-2 border border-cyan-600/40 text-cyan-300 hover:bg-cyan-600/10 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-4 h-4"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM12 18l-4-4h3V9h2v5h3l-4 4z" />
+              </svg>
+              Resume
+            </a>
+          </div>
         </div>
 
       </div>

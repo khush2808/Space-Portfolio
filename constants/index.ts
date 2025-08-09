@@ -255,6 +255,28 @@ export const Other_skill = [
   },
 ];
 
+// -------------------- Resume / Experience Data --------------------
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  summary: string;
+  highlights: string[];
+}
+
+export const experienceData: ExperienceItem[] = [
+  
+];
+
+export interface AchievementItem {
+  title: string;
+  description: string;
+}
+
+export const achievementData: AchievementItem[] = [
+  
+];
+
 
 
 
