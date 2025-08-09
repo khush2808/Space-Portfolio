@@ -64,7 +64,21 @@ const Projects = () => {
           key="9"
           github="https://github.com/khush2808/space-portfolio"
         />
-              <p className="text-center text-gray-500">(Not updated check my github for latest projects)</p>
+        <div className="col-span-full flex flex-col items-center space-y-1">
+          <p className="text-center text-gray-500">
+            (Not updated, check my github for latest projects)
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume"
+            title="Resume"
+            className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
+          >
+            <span className="text-center text-gray-500">My resume: 📑</span>
+          </a>
+        </div>
 
       </div>
     </div>
