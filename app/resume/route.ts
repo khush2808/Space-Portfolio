@@ -8,7 +8,8 @@ const RESUME_URL = "https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F
 
 export function GET(_req: NextRequest) {
   // 302 (temporary) so future updates don't get cached permanently by browsers/CDNs
-  return Response.redirect(RESUME_URL, 302);
+  // 301 now cause I want it to be cached.
+  return Response.redirect(RESUME_URL, 301);
 }
 
 // Optional: handle HEAD for completeness
