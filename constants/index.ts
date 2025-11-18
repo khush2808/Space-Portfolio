@@ -95,7 +95,7 @@ export const Socials = [
   {
     name: "Leetcode",
     src: "/leetcode.svg",
-    href:"https://leetcode.com/u/khush2808/"
+    href:"https://leetcode.com/u/khushicpc/"
   },
 ];
 
