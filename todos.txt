@@ -1,0 +1,9 @@
+-fix and add codolio/linktree or stuff to navbar
+-add experience and technical skills section
+- add about me section -the achievements kinda thing
+ -- actually achievements 
+ + also feats why hire me thingy.
+-update github projects 
+ -- will be pending 
+ -- dependencies projects to be built properly 🤣
+ 
