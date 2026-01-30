@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
+    <div className="w-full h-[80px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
         <a
           href="#about-me"
@@ -35,13 +35,13 @@ const Navbar = () => {
             <a href="#projects" className="cursor-pointer">
               Projects
             </a>
-            {/* <a href="#experience" className="cursor-pointer">
+            <a href="#experience" className="cursor-pointer">
               Experience
-            </a> */}
+            </a>
           </div>
         </div>
 
-        <div className="hidden sm:flex flex-row gap-5">
+        <div className="hidden sm:flex flex-row gap-4 items-center">
   {Socials.map((social) => (
     <a
       href={social.href}
@@ -50,12 +50,14 @@ const Navbar = () => {
       key={social.name}
       aria-label={social.name}
       title={social.name}
+      className="w-7 h-7 flex items-center justify-center overflow-hidden rounded"
     >
       <Image
         src={social.src}
         alt={social.name}
-        width={24}
-        height={24}
+        width={28}
+        height={28}
+        className="w-7 h-7 object-cover"
       />
     </a>
   ))}
