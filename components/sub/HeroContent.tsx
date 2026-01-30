@@ -46,12 +46,12 @@ const HeroContent = () => {
           </span>
         </motion.div>
 
-        <motion.p
+        {/* <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software developer with experience in Website development. Check out my projects and skills.
-        </motion.p>
+          AIR 48 ICPC Regionalist&apos;24 | Expert on Codeforces (1606) | Knight on LeetCode (2005) | 4★ CodeChef (1982). Full Stack Developer skilled in Next.js, TypeScript, Gen-AI, and building scalable systems. 2000+ DSA problems solved.
+        </motion.p> */}
         {/* <motion.a
           href="https://drive.google.com/file/d/1l2jwt9Y4j8dLHvFhMI1w8_NWw2F2gQlr/view"
           target="_blank"
