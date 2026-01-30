@@ -13,6 +13,14 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
         <ProjectCard
+          src="/portfolio.png"
+          title="My Portfolio"
+          description="A personal portfolio website showcasing my projects, skills, and experiences. Designed to highlight my work in web development and software engineering."
+          link="https://khushshah.vercel.app"
+          key="1"
+          github="https://github.com/khush2808/space-portfolio"
+        />
+        <ProjectCard
           src="/storify.png"
           title="Storify"
           description="Storify is a versatile storage app where users can store, rename, delete, share, and organize all types of files. With features like sorting and file management, it makes organizing your digital assets easy and efficient."
@@ -20,15 +28,12 @@ const Projects = () => {
           key="2"
           github="https://github.com/khush2808/storify"
         />
-
-
-
         <ProjectCard
           src="/syncstream.png"
           title="SyncStream"
           description="SyncStream is a video calling platform enabling seamless virtual meetings with features like screen sharing, chat, and secure video calls."
           link="https://sync-stream-app.vercel.app/"
-          key="5"
+          key="3"
           github="https://github.com/khush2808/sync-stream-app"
         />
         <ProjectCard
@@ -36,7 +41,7 @@ const Projects = () => {
           title="Crypto Tracker"
           description="A web app to track cryptocurrency prices in real time, with features to view price history and set custom alerts for market changes."
           link="https://crypto-tracker-khush.vercel.app/"
-          key="6"
+          key="4"
           github="https://github.com/khush2808/crypto-tracker-app"
         />
         <ProjectCard
@@ -44,7 +49,7 @@ const Projects = () => {
           title="FinanceMate"
           description="A personal finance tool that helps users manage their budgets, track expenses, and visualize spending habits through easy-to-read charts."
           link="https://finance-mate.vercel.app/"
-          key="7"
+          key="5"
           github="https://github.com/khush2808/finance-mate"
         />
         <ProjectCard
@@ -52,16 +57,16 @@ const Projects = () => {
           title="Tomato - Food Delivery"
           description="A food delivery app that allows users to browse menus, place orders, and track their food in real time. Offers smooth navigation and user-friendly design."
           link="https://food-delivery-frontend-no0l.onrender.com/"
-          key="8"
+          key="6"
           github="https://github.com/khush2808/zomato-clone"
         />
         <ProjectCard
-          src="/portfolio.png"
-          title="My Portfolio"
-          description="A personal portfolio website showcasing my projects, skills, and experiences. Designed to highlight my work in web development and software engineering."
-          link="https://khushshah.vercel.app"
-          key="9"
-          github="https://github.com/khush2808/space-portfolio"
+          src="/claude-code-clone.png"
+          title="Claude Code Clone"
+          description="An AI-powered CLI coding assistant built with Gemini 2.5 Flash, LangGraph for agent workflows, and MCP for tool integration. Features filesystem operations, GitHub integration, web search, and conversation memory with PostgreSQL."
+          link="https://github.com/khush2808/claude-code-clone"
+          key="7"
+          github="https://github.com/khush2808/claude-code-clone"
         />
         <div className="col-span-full flex flex-col items-center space-y-4 mt-4">
           <p className="text-center text-gray-500 text-sm max-w-2xl">
