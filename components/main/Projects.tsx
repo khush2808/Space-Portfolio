@@ -73,7 +73,7 @@ const Projects = () => {
           // technologies={["Gemini 2.5 Flash", "LangGraph", "MCP", "PostgreSQL"]}
         />
         <ProjectCard
-          src=""
+          src="/flyhigh.jpg"
           title="FlyHigh"
           description="Asynchronous event based architecture for an Airline Management System. Developed four microservices: Authentication, Flight, Booking, and Reminder services to handle specific tasks within the system. Each service was designed to optimize functionality and maintain separation of concerns. Created a Reminder service using Nodemailer and RabbitMQ to send email alerts and updates."
           link="https://github.com/khush2808/FlyHigh"

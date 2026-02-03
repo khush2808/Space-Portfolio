@@ -363,6 +363,14 @@ export const achievementData: AchievementItem[] = [
   {
     title: "2000+ Problems Solved",
     description: "Solved 2000+ algorithmic problems across LeetCode, Codeforces, and GeeksforGeeks."
+  },
+  {
+    title: "Harkirat Cohort 2.0",
+    description: "Completed the intensive 0-100 web development bootcamp focusing on full-stack development practices."
+  },
+  {
+    title: "ICPC Regionalist",
+    description: "ICPC Regionalist with performances at multiple regional contests including Chennai and Amritapuri."
   }
 ];
 

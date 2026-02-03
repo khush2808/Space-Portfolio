@@ -119,7 +119,7 @@ const Navbar = () => {
             </button>
 
             {/* Profile / social icons – desktop only; on mobile they’re in the sidebar */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-6">
               {Socials.map((social) => (
                 <a
                   href={social.href}
@@ -128,14 +128,14 @@ const Navbar = () => {
                   key={social.name}
                   aria-label={social.name}
                   title={social.name}
-                  className="flex items-center justify-center overflow-hidden rounded-lg w-7 h-7 flex-shrink-0"
+                  className="flex items-center justify-center overflow-hidden rounded-lg w-10 h-10 flex-shrink-0"
                 >
                   <Image
                     src={social.src}
                     alt=""
-                    width={28}
-                    height={28}
-                    className="w-6 h-6 object-contain"
+                    width={40}
+                    height={40}
+                    className="w-8 h-8 object-contain"
                   />
                 </a>
               ))}
