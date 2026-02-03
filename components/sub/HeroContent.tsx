@@ -41,7 +41,6 @@ const HeroContent = () => {
               {" "}
               Software Engineer{" "}
             </span>
-            Developer
         </motion.div>
 
         {/* <motion.p
