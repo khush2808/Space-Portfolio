@@ -290,30 +290,29 @@ export const experienceData: ExperienceItem[] = [
   {
     role: "SDE Intern",
     company: "Futures First",
-    period: "Oct 2025 - Dec 2025",
+    period: "Oct 2025 - Jan 2026",
     summary: "Jaipur, Rajasthan, India · On-site",
     highlights: [
-      "Implementing an options analysis dashboard with Next.js, Apache ECharts, and MobX for state management",
-      "Working on saving and viewing trading strategies and handling backend design (DB design + APIs)",
-      "Implementing Next.js custom server patterns",
-      "Implemented Nx monorepos in a repo with over 15 dashboards to manage dependencies and cache deployments"
+      "Contributed across 3 repositories, merging 20+ pull requests and delivering 10k+ lines of production code across frontend and backend systems",
+      "Architected an options and derivatives analysis dashboard using Apache ECharts and MobX, actively used by over 150+ traders",
+      "Designed scalable database schemas using Mongoose and built backend APIs in Next.js to persist trading strategies and analytical workflows",
+      "Introduced an Nx monorepo architecture, standardizing dependencies and enabling build caching across 15+ dashboards, significantly improving developer productivity"
     ],
-    // technologies: ["Next.js", "Apache ECharts", "MobX", "Nx"]
+    // technologies: ["TypeScript", "Next.js", "MobX", "Nx", "Apache ECharts", "MongoDB"]
   },
   {
     role: "SDE Intern",
     company: "CreditSea",
-    period: "Jul 2025 - Oct 2025",
+    period: "Jul 2025 - Sep 2025",
     summary: "Raipur, Chhattisgarh, India · On-site",
     highlights: [
-      "Optimized database queries with aggregation pipelines and bulkwrites, improved backend logic in over 10 cron services, reducing API response times by 60%",
-      "Built real-time analytics dashboard for loan officers displaying portfolio metrics, default predictions, and collection insights, enabling data-driven decisions",
-      "Implemented 2FA and security features across LOS-LMS authentication systems",
-      "Developed automated invoice generation APIs and Excel text-extraction pipelines saving 20+ hrs/week",
-      "Implemented complete backend API integration for BharatBillPaySystem, increasing app traction by allowing users to pay bills and recharge",
-      "Worked on internal categorisation, tooling, core customer review system, and various features and bug fixes"
+      "Optimized MongoDB queries using aggregation pipelines and bulk writes, improved backend logic across 10+ cron services, reducing API response times by 60%",
+      "Engineered automated invoice generation APIs and Excel-based text extraction pipelines, eliminating manual workflows and saving 20+ hours per week for operations teams",
+      "Engineered the end-to-end backend architecture for Bharat Bill Payment System (BBPS) integrations, handling high-volume payment APIs and webhooks from Cashfree and Setu (Pine Labs) with robust failure handling and reconciliation",
+      "Implemented end-to-end authentication and authorization using RBAC and 2FA, securing LOS-LMS systems with granular access control and improved account security",
+      "Built real-time analytics dashboard for loan officers displaying portfolio metrics, default predictions, and collection insights, enabling data-driven decisions"
     ],
-    // technologies: ["MongoDB", "Express", "Node.js", "React", "Next.js"]
+    // technologies: ["TypeScript", "Next.js", "Node.js", "Express.js", "MongoDB"]
   },
   {
     role: "Full-stack Developer",
