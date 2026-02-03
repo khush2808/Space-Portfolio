@@ -36,14 +36,12 @@ const HeroContent = () => {
             Khush Shah
           </h1>
           </span>
-          <span>
-            Passionate
+          
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              Full Stack{" "}
+              Software Engineer{" "}
             </span>
             Developer
-          </span>
         </motion.div>
 
         {/* <motion.p
