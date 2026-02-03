@@ -272,55 +272,61 @@ export interface ExperienceItem {
   period: string;
   summary: string;
   highlights: string[];
+  // technologies?: string[]; // Commented out - not displayed in UI for now
 }
 
 export const experienceData: ExperienceItem[] = [
   {
     role: "SDE Intern",
+    company: "HexaWealth",
+    period: "Jan 2026 - Present",
+    summary: "Hyderabad, Telangana, India · On-site",
+    highlights: [
+      "Building a wealth advisory and management platform with FastAPI, Azure and React Native",
+      "Integrating third party account aggregators APIs such as FinFactor(Finvu) and MFCentral to fetch, sync and manage customer's assets"
+    ],
+    // technologies: ["FastAPI", "Azure", "React Native", "FinFactor", "MFCentral"]
+  },
+  {
+    role: "SDE Intern",
     company: "Futures First",
     period: "Oct 2025 - Dec 2025",
-    summary: "Worked on trading dashboards and options analysis tools for a quantitative trading firm.",
+    summary: "Jaipur, Rajasthan, India · On-site",
     highlights: [
       "Implementing an options analysis dashboard with Next.js, Apache ECharts, and MobX for state management",
       "Working on saving and viewing trading strategies and handling backend design (DB design + APIs)",
       "Implementing Next.js custom server patterns",
       "Implemented Nx monorepos in a repo with over 15 dashboards to manage dependencies and cache deployments"
-    ]
+    ],
+    // technologies: ["Next.js", "Apache ECharts", "MobX", "Nx"]
   },
   {
     role: "SDE Intern",
     company: "CreditSea",
     period: "Jul 2025 - Oct 2025",
-    summary: "Optimized backend systems and built analytics dashboards for a lending platform.",
+    summary: "Raipur, Chhattisgarh, India · On-site",
     highlights: [
-      "Optimized database queries with aggregation pipelines and bulkwrites, reducing API response times by 60%",
-      "Built real-time analytics dashboard for loan officers with portfolio metrics and default predictions",
+      "Optimized database queries with aggregation pipelines and bulkwrites, improved backend logic in over 10 cron services, reducing API response times by 60%",
+      "Built real-time analytics dashboard for loan officers displaying portfolio metrics, default predictions, and collection insights, enabling data-driven decisions",
       "Implemented 2FA and security features across LOS-LMS authentication systems",
       "Developed automated invoice generation APIs and Excel text-extraction pipelines saving 20+ hrs/week",
-      "Implemented complete backend API integration for BharatBillPaySystem"
-    ]
+      "Implemented complete backend API integration for BharatBillPaySystem, increasing app traction by allowing users to pay bills and recharge",
+      "Worked on internal categorisation, tooling, core customer review system, and various features and bug fixes"
+    ],
+    // technologies: ["MongoDB", "Express", "Node.js", "React", "Next.js"]
   },
   {
     role: "Full-stack Developer",
     company: "Stealth Startup",
     period: "Jan 2025 - May 2025",
-    summary: "Built AI-driven customer support agents for e-commerce stores.",
+    summary: "Remote",
     highlights: [
-      "Built AI-driven customer support agents using Flowise (self-hosted on Azure) serving 150+ store clients",
+      "Built AI-driven customer support agents using Flowise (self-hosted on Azure) helping customers on ecommerce stores, attracting over 150 store-owning clients",
       "Integrated Shopify GraphQL APIs to contextualize AI agents, enhancing recommendation accuracy by 40%",
-      "Developed website and Admin Dashboard using Next.js, Express, and MongoDB",
-      "Created complex CI/CD pipeline for auto-sync across repos, increasing developer productivity by 60%"
-    ]
-  },
-  {
-    role: "Community Lead - CP Wing",
-    company: "House of Geeks, IIIT Ranchi",
-    period: "Aug 2024 - Aug 2025",
-    summary: "Led the competitive programming wing of the technical society.",
-    highlights: [
-      "Head of Competitive Programming Wing",
-      "Responsible for growing CP culture in college and encouraging students to learn DSA and participate in contests"
-    ]
+      "Developed website and Admin Dashboard using Next.js, Express, and MongoDB to manage analytics, billing, and chat histories",
+      "Created complex CI/CD pipeline to auto-sync changes across repos and automated app deployment on Shopify's CDN and edge functions, increasing developer productivity by 60%"
+    ],
+    // technologies: ["Next.js", "Express", "MongoDB", "Flowise", "Azure", "Shopify GraphQL"]
   }
 ];
 
@@ -357,10 +363,6 @@ export const achievementData: AchievementItem[] = [
   {
     title: "2000+ Problems Solved",
     description: "Solved 2000+ algorithmic problems across LeetCode, Codeforces, and GeeksforGeeks."
-  },
-  {
-    title: "CP Wing Lead @ House of Geeks",
-    description: "Led the CP Wing at IIIT Ranchi, conducting DSA classes, mentoring students, and organizing 50+ post-contest analysis sessions."
   }
 ];
 
@@ -383,5 +385,28 @@ export const educationData: EducationItem[] = [
     degree: "Grade 12th, Computer Science",
     institution: "Jay Jalaram International School",
     period: "Jul 2020 - Mar 2022"
+  }
+];
+
+// -------------------- Leadership & Volunteering Data --------------------
+export interface LeadershipItem {
+  role: string;
+  organization: string;
+  period: string;
+  location: string;
+  highlights: string[];
+}
+
+export const leadershipData: LeadershipItem[] = [
+  {
+    role: "Community Lead - CP Wing",
+    organization: "House of Geeks, IIIT Ranchi",
+    period: "Aug 2024 - Aug 2025",
+    location: "Ranchi, Jharkhand, India",
+    highlights: [
+      "Led the Competitive Programming Wing, conducting DSA-focused classes and mentoring students for competitive programming contests",
+      "Organized 50+ post-contest analysis sessions/meets to drive peer learning and performance improvement across the community",
+      "Organized ICPC-style 5-hour team competitions to simulate real contest environments and enhance collaborative problem-solving skills"
+    ]
   }
 ];

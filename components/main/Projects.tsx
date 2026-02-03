@@ -7,9 +7,12 @@ const Projects = () => {
       className="flex flex-col items-center justify-center pt-8 pb-20"
       id="projects"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
-        Featured Projects
-      </h1>
+      <div className="w-full flex flex-col items-center mb-12 md:mb-16">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-purple-400 to-cyan-500 py-6 md:py-10 text-center">
+          Featured Projects
+        </h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
         <ProjectCard
@@ -67,10 +70,20 @@ const Projects = () => {
           link="https://github.com/khush2808/claude-code-clone"
           key="7"
           github="https://github.com/khush2808/claude-code-clone"
+          // technologies={["Gemini 2.5 Flash", "LangGraph", "MCP", "PostgreSQL"]}
+        />
+        <ProjectCard
+          src=""
+          title="FlyHigh"
+          description="Asynchronous event based architecture for an Airline Management System. Developed four microservices: Authentication, Flight, Booking, and Reminder services to handle specific tasks within the system. Each service was designed to optimize functionality and maintain separation of concerns. Created a Reminder service using Nodemailer and RabbitMQ to send email alerts and updates."
+          link="https://github.com/khush2808/FlyHigh"
+          key="8"
+          github="https://github.com/khush2808/FlyHigh"
+          // technologies={["NodeJS", "ExpressJS", "Sequelize", "RabbitMQ", "MySQL", "Nodemailer"]}
         />
         <div className="col-span-full flex flex-col items-center space-y-4 mt-4">
           <p className="text-center text-gray-500 text-sm max-w-2xl">
-            Looking for more? This list highlights a subset. Visit my GitHub profile for all repositories, more recent work, and latest projects.
+            Looking for more? Visit my GitHub profile for all repositories, more recent work, and latest projects.
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <a

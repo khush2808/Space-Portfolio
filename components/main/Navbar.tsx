@@ -168,7 +168,7 @@ const Navbar = () => {
         aria-label="Navigation menu"
         aria-hidden={!sidebarOpen}
       >
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between px-6 py-4">
           <span className="font-bold text-gray-300">Menu</span>
           <button
             type="button"
@@ -179,22 +179,22 @@ const Navbar = () => {
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-        <nav className="flex flex-col gap-3 px-4 py-2">
+        <nav className="flex flex-col gap-2 px-4 py-2">
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={href}
               href={href}
               onClick={closeSidebar}
-              className="rounded-xl border border-[#7042f861]/40 bg-[#0d0222]/80 px-4 py-3.5 text-gray-200 shadow-sm hover:bg-[#7042f82a] hover:border-[#7042f861]/60 transition-colors"
+              className="rounded-lg px-2 py-3 text-lg font-medium text-gray-200 hover:text-white hover:bg-white/5 transition-colors"
             >
               {label}
             </a>
           ))}
         </nav>
 
-        {/* Profile links – card at bottom */}
-        <div className="mt-auto p-4">
-          <div className="rounded-xl border border-[#7042f861]/40 bg-[#0d0222]/80 p-4 flex flex-wrap gap-4 justify-center">
+        {/* Profile links – no card box, just icons */}
+        <div className="mt-auto p-6">
+          <div className="flex flex-wrap gap-6 justify-center">
             {Socials.map((social) => (
               <a
                 href={social.href}
@@ -204,14 +204,14 @@ const Navbar = () => {
                 aria-label={social.name}
                 title={social.name}
                 onClick={closeSidebar}
-                className="flex items-center justify-center overflow-hidden rounded-lg w-10 h-10 flex-shrink-0 hover:opacity-90 hover:scale-105 transition-all"
+                className="flex items-center justify-center overflow-hidden w-8 h-8 flex-shrink-0 hover:opacity-80 transition-opacity"
               >
                 <Image
                   src={social.src}
                   alt=""
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
                 />
               </a>
             ))}
