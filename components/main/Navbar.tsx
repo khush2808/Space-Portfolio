@@ -21,6 +21,7 @@ const Navbar = () => {
     setMounted(true);
   }, []);
 
+  // Hide navbar when user scrolls past ~1 viewport (JS; CSS sticky would do the opposite – keep bar visible)
   useEffect(() => {
     if (!mounted) return;
 
@@ -39,7 +40,7 @@ const Navbar = () => {
     const checkScroll = () => {
       const scrollTop = getScrollTop();
       const viewportHeight = getViewportHeight();
-      setVisibleInHero(scrollTop < viewportHeight * 0.95);
+      setVisibleInHero(scrollTop < viewportHeight * 0.75);
     };
 
     checkScroll();
@@ -71,14 +72,13 @@ const Navbar = () => {
           transition-transform duration-300 ease-out
           bg-[#030014] md:bg-[#03001417] md:backdrop-blur-md
           ${mounted ? (visibleInHero ? "translate-y-0" : "-translate-y-full") : "translate-y-0"}
-          md:translate-y-0
         `}
       >
         <div className="flex h-full w-full max-w-7xl mx-auto items-center justify-between gap-4">
-          {/* Left: logo + name (desktop only) */}
+          {/* Left: logo + name – lg and up only (iPad mini and below: not rendered, so nav starts at left) */}
           <a
             href="#about-me"
-            className="hidden md:flex items-center gap-3 shrink-0"
+            className="hidden lg:flex items-center gap-3 shrink-0"
             aria-label="Home"
           >
             <Image
@@ -91,8 +91,8 @@ const Navbar = () => {
             <span className="font-bold text-gray-300">Khush Shah</span>
           </a>
 
-          {/* Center: nav links (desktop only) */}
-          <nav className="hidden md:flex flex-1 items-center justify-center min-w-0">
+          {/* Center on lg / start on md: nav links (md and up; at start when no logo, centered when logo present) */}
+          <nav className="hidden md:flex flex-1 items-center justify-start lg:justify-center min-w-0">
             <div className="flex items-center gap-1 rounded-full border border-[#7042f861] bg-[#0300145e] px-5 py-2.5">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
@@ -106,9 +106,9 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Right: mobile = menu + profile icons | desktop = profile icons */}
-          <div className="flex items-center justify-end gap-5 md:gap-5 shrink-0 min-w-0">
-            {/* Mobile: menu button – always visible below md */}
+          {/* Right: mobile = menu only | desktop = profile icons */}
+          <div className="flex items-center justify-end gap-4 shrink-0 min-w-0">
+            {/* Mobile: menu button only (no profile links in navbar on mobile) */}
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
@@ -118,8 +118,8 @@ const Navbar = () => {
               <Bars3Icon className="w-7 h-7" strokeWidth={2} />
             </button>
 
-            {/* Profile / social icons – larger gap and height on mobile */}
-            <div className="flex items-center gap-6 md:gap-4 h-12 md:h-auto items-center">
+            {/* Profile / social icons – desktop only; on mobile they’re in the sidebar */}
+            <div className="hidden md:flex items-center gap-4">
               {Socials.map((social) => (
                 <a
                   href={social.href}
@@ -128,14 +128,14 @@ const Navbar = () => {
                   key={social.name}
                   aria-label={social.name}
                   title={social.name}
-                  className="flex items-center justify-center overflow-hidden rounded-lg w-11 h-11 md:w-7 md:h-7 flex-shrink-0"
+                  className="flex items-center justify-center overflow-hidden rounded-lg w-7 h-7 flex-shrink-0"
                 >
                   <Image
                     src={social.src}
                     alt=""
                     width={28}
                     height={28}
-                    className="w-7 h-7 md:w-6 md:h-6 object-contain"
+                    className="w-6 h-6 object-contain"
                   />
                 </a>
               ))}
@@ -159,8 +159,8 @@ const Navbar = () => {
       {/* Mobile sidebar panel – slides in from left */}
       <aside
         className={`
-          fixed top-0 left-0 z-[70] h-full w-[min(280px,85vw)] 
-          bg-[#030014] border-r border-[#7042f861] shadow-xl
+          fixed top-0 left-0 z-[70] h-full w-[min(320px,92vw)] 
+          bg-[#030014] shadow-xl
           md:hidden flex flex-col
           transition-transform duration-300 ease-out
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
@@ -168,7 +168,7 @@ const Navbar = () => {
         aria-label="Navigation menu"
         aria-hidden={!sidebarOpen}
       >
-        <div className="flex items-center justify-between p-4 border-b border-[#7042f861]">
+        <div className="flex items-center justify-between p-4">
           <span className="font-bold text-gray-300">Menu</span>
           <button
             type="button"
@@ -179,18 +179,44 @@ const Navbar = () => {
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-        <nav className="flex flex-col p-4 gap-1">
+        <nav className="flex flex-col gap-3 px-4 py-2">
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={href}
               href={href}
               onClick={closeSidebar}
-              className="rounded-lg px-4 py-3 text-gray-200 hover:bg-[#7042f82a] transition-colors"
+              className="rounded-xl border border-[#7042f861]/40 bg-[#0d0222]/80 px-4 py-3.5 text-gray-200 shadow-sm hover:bg-[#7042f82a] hover:border-[#7042f861]/60 transition-colors"
             >
               {label}
             </a>
           ))}
         </nav>
+
+        {/* Profile links – card at bottom */}
+        <div className="mt-auto p-4">
+          <div className="rounded-xl border border-[#7042f861]/40 bg-[#0d0222]/80 p-4 flex flex-wrap gap-4 justify-center">
+            {Socials.map((social) => (
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.name}
+                aria-label={social.name}
+                title={social.name}
+                onClick={closeSidebar}
+                className="flex items-center justify-center overflow-hidden rounded-lg w-10 h-10 flex-shrink-0 hover:opacity-90 hover:scale-105 transition-all"
+              >
+                <Image
+                  src={social.src}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       </aside>
     </>
   );
