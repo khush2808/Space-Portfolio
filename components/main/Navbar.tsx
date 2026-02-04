@@ -22,6 +22,7 @@ const Navbar = () => {
   }, []);
 
   // Hide navbar when user scrolls past ~1 viewport (JS; CSS sticky would do the opposite – keep bar visible)
+  /*
   useEffect(() => {
     if (!mounted) return;
 
@@ -58,6 +59,7 @@ const Navbar = () => {
       }
     };
   }, [mounted]);
+  */
 
   const closeSidebar = () => setSidebarOpen(false);
 
@@ -70,7 +72,7 @@ const Navbar = () => {
           md:shadow-lg md:shadow-[#2A0E61]/50
           transition-transform duration-300 ease-out
           bg-transparent md:bg-[#03001417] md:backdrop-blur-md
-          ${mounted ? (visibleInHero ? "translate-y-0" : "-translate-y-full") : "translate-y-0"}
+          translate-y-0
         `}
       >
         <div className="w-full h-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-12 md:grid md:grid-cols-3">
