@@ -13,9 +13,7 @@ import Image from "next/image";
 
 const HeroContent = () => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
+    <div
       className="flex flex-row items-center justify-center px-20 pl-10 md:mt-40 lg:mt-20 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
@@ -27,8 +25,7 @@ const HeroContent = () => {
         
         {/* </motion.div> */}
 
-        <motion.div
-          variants={slideInFromLeft(0.5)}
+        <div
           className="flex flex-col  gap-6 mt-16 md:mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
@@ -44,7 +41,7 @@ const HeroContent = () => {
             </span>
             {"\n "}
         </span>
-        </motion.div>
+        </div>
 
         {/* <motion.p
           variants={slideInFromLeft(0.8)}
@@ -66,8 +63,7 @@ const HeroContent = () => {
         
       </div>
 
-      <motion.div
-        variants={slideInFromRight(0.8)}
+      <div
         className="w-full h-full flex justify-center items-center"
       >
         <Image
@@ -76,8 +72,8 @@ const HeroContent = () => {
           height={650}
           width={650}
         />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
