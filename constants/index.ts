@@ -358,7 +358,7 @@ export const achievementData: AchievementItem[] = [
   },
   {
     title: "4★ on CodeChef (1982)",
-    description: "Achieved 4-star rating on CodeChef."
+    description: "Achieved 4-star on CodeChef."
   },
   {
     title: "CodeStudio Global Ranks 2 & 3",
@@ -371,10 +371,6 @@ export const achievementData: AchievementItem[] = [
   {
     title: "Harkirat Cohort 2.0",
     description: "Completed the intensive 0-100 web development bootcamp focusing on full-stack development practices."
-  },
-  {
-    title: "ICPC Regionalist",
-    description: "ICPC Regionalist with performances at multiple regional contests including Chennai and Amritapuri."
   }
 ];
 
