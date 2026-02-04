@@ -103,7 +103,7 @@ const Navbar = () => {
                   href={href}
                   className="rounded-full px-4 py-2 text-gray-200 hover:bg-[#7042f82a] transition-colors"
                 >
-                  {label}
+                  {label === "Experience and Achievements" ? "Experience" : label}
                 </a>
               ))}
             </div>
