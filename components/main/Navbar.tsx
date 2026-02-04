@@ -67,32 +67,33 @@ const Navbar = () => {
       <header
         className={`
           fixed top-0 left-0 right-0 z-50 h-[80px] w-full
-          flex items-center justify-between gap-4 px-4 md:px-10
-          shadow-lg shadow-[#2A0E61]/50
+          md:shadow-lg md:shadow-[#2A0E61]/50
           transition-transform duration-300 ease-out
-          bg-[#030014] md:bg-[#03001417] md:backdrop-blur-md
+          bg-transparent md:bg-[#03001417] md:backdrop-blur-md
           ${mounted ? (visibleInHero ? "translate-y-0" : "-translate-y-full") : "translate-y-0"}
         `}
       >
-        <div className="flex h-full w-full max-w-7xl mx-auto items-center justify-between gap-4">
-          {/* Left: logo + name – lg and up only (iPad mini and below: not rendered, so nav starts at left) */}
-          <a
-            href="#about-me"
-            className="hidden lg:flex items-center gap-3 shrink-0"
-            aria-label="Home"
-          >
-            <Image
-              src="/NavLogo.png"
-              alt=""
-              width={56}
-              height={56}
-              className="cursor-pointer hover:animate-slowspin object-contain"
-            />
-            <span className="font-bold text-gray-300">Khush Shah</span>
-          </a>
+        <div className="w-full h-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-12 md:grid md:grid-cols-3">
+          {/* Left: logo + name */}
+          <div className="flex flex-row items-center justify-start h-auto w-auto">
+            <a
+              href="#about-me"
+              className="hidden lg:flex flex-row items-center gap-3 shrink-0"
+              aria-label="Home"
+            >
+              <Image
+                src="/NavLogo.png"
+                alt=""
+                width={56}
+                height={56}
+                className="cursor-pointer hover:animate-slowspin object-contain"
+              />
+              <span className="font-bold text-gray-300">Khush Shah</span>
+            </a>
+          </div>
 
-          {/* Center on lg / start on md: nav links (md and up; at start when no logo, centered when logo present) */}
-          <nav className="hidden md:flex flex-1 items-center justify-start lg:justify-center min-w-0">
+          {/* Center: nav links */}
+          <nav className="hidden md:flex flex-row items-center justify-center">
             <div className="flex items-center gap-1 rounded-full border border-[#7042f861] bg-[#0300145e] px-5 py-2.5">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
@@ -106,20 +107,10 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Right: mobile = menu only | desktop = profile icons */}
-          <div className="flex items-center justify-end gap-4 shrink-0 min-w-0">
-            {/* Mobile: menu button only (no profile links in navbar on mobile) */}
-            <button
-              type="button"
-              onClick={() => setSidebarOpen(true)}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
-              aria-label="Open menu"
-            >
-              <Bars3Icon className="w-7 h-7" strokeWidth={2} />
-            </button>
-
-            {/* Profile / social icons – desktop only; on mobile they’re in the sidebar */}
-            <div className="hidden md:flex items-center gap-6">
+          {/* Right: profile icons + mobile menu */}
+          <div className="flex flex-row items-center justify-end gap-5">
+            {/* Desktop social icons */}
+            <div className="hidden md:flex flex-row items-center gap-4">
               {Socials.map((social) => (
                 <a
                   href={social.href}
@@ -128,18 +119,28 @@ const Navbar = () => {
                   key={social.name}
                   aria-label={social.name}
                   title={social.name}
-                  className="flex items-center justify-center overflow-hidden rounded-lg w-10 h-10 flex-shrink-0"
+                  className="flex items-center justify-center overflow-hidden rounded-lg w-9 h-9 flex-shrink-0"
                 >
                   <Image
                     src={social.src}
                     alt=""
-                    width={40}
-                    height={40}
-                    className="w-8 h-8 object-contain"
+                    width={36}
+                    height={36}
+                    className="w-7 h-7 object-contain"
                   />
                 </a>
               ))}
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              onClick={() => setSidebarOpen(true)}
+              className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
+              aria-label="Open menu"
+            >
+              <Bars3Icon className="w-7 h-7" strokeWidth={2} />
+            </button>
           </div>
         </div>
       </header>
