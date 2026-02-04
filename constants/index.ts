@@ -107,6 +107,11 @@ export const Socials = [
     src: "/codechef_logo.png",
     href: "https://www.codechef.com/users/khush2808"
   },
+  {
+    name: "Codolio",
+    src: "/codolio.svg",
+    href: "https://codolio.com/profile/khush2808"
+  },
 ];
 
 
