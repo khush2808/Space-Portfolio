@@ -350,7 +350,7 @@ export const achievementData: AchievementItem[] = [
   },
   {
     title: "Expert on Codeforces (1606)",
-    description: "Top 0.5% on Codeforces with Expert rating."
+    description: "Top 0.5% on Codeforces with Expert badge."
   },
   {
     title: "Knight on LeetCode (2005)",
