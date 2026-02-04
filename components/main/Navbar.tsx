@@ -68,7 +68,7 @@ const Navbar = () => {
       {/* Nav bar: clean flex – left | center | right */}
       <header
         className={`
-          fixed top-0 left-0 right-0 z-50 h-[80px] w-full
+          fixed top-0 left-0 right-0 z-50 h-[65px] w-full
           md:shadow-lg md:shadow-[#2A0E61]/50
           transition-transform duration-300 ease-out
           bg-transparent md:bg-[#03001417] md:backdrop-blur-md
@@ -86,8 +86,8 @@ const Navbar = () => {
               <Image
                 src="/NavLogo.png"
                 alt=""
-                width={56}
-                height={56}
+                width={45}
+                height={45}
                 className="cursor-pointer hover:animate-slowspin object-contain"
               />
               <span className="font-bold text-gray-300">Khush Shah</span>
@@ -96,12 +96,12 @@ const Navbar = () => {
 
           {/* Center: nav links */}
           <nav className="hidden md:flex flex-row items-center justify-center">
-            <div className="flex items-center gap-1 rounded-full border border-[#7042f861] bg-[#0300145e] px-5 py-2.5">
+            <div className="flex items-center gap-1 rounded-full border border-[#7042f861] bg-[#0300145e] px-5 py-2">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
                   key={href}
                   href={href}
-                  className="rounded-full px-4 py-2 text-gray-200 hover:bg-[#7042f82a] transition-colors"
+                  className="rounded-full px-4 py-1.5 text-gray-200 hover:bg-[#7042f82a] transition-colors"
                 >
                   {label}
                 </a>
@@ -138,10 +138,10 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
+              className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
               aria-label="Open menu"
             >
-              <Bars3Icon className="w-7 h-7" strokeWidth={2} />
+              <Bars3Icon className="w-6 h-6" strokeWidth={2} />
             </button>
           </div>
         </div>
@@ -163,41 +163,51 @@ const Navbar = () => {
       <aside
         className={`
           fixed top-0 right-0 z-[70] h-full w-full
-          bg-[#030014] shadow-xl
+          bg-[#030014] bg-opacity-95 backdrop-blur-xl
           md:hidden flex flex-col
-          transition-transform duration-300 ease-out
+          transition-transform duration-500 ease-in-out
           ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
         `}
         aria-label="Navigation menu"
         aria-hidden={!sidebarOpen}
       >
-        <div className="flex items-center justify-between px-6 py-4">
-          <span className="font-bold text-gray-300">Menu</span>
+        <div className="flex items-center justify-end px-8 py-6">
           <button
             type="button"
             onClick={closeSidebar}
-            className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-300 hover:bg-white/10 transition-colors"
+            className="flex items-center justify-center w-12 h-12 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
             aria-label="Close menu"
           >
-            <XMarkIcon className="w-6 h-6" />
+            <XMarkIcon className="w-8 h-8" />
           </button>
         </div>
-        <nav className="flex flex-col gap-2 px-4 py-2">
-          {NAV_LINKS.map(({ label, href }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={closeSidebar}
-              className="rounded-lg px-2 py-3 text-lg font-medium text-gray-200 hover:text-white hover:bg-white/5 transition-colors"
-            >
-              {label}
-            </a>
+
+        <nav className="flex flex-col px-6 py-4 overflow-y-auto">
+          {NAV_LINKS.map(({ label, href }, index) => (
+            <React.Fragment key={href}>
+              <a
+                href={href}
+                onClick={closeSidebar}
+                className="group flex items-center justify-between py-6 text-2xl font-medium text-gray-300 hover:text-white transition-all duration-300"
+              >
+                <span>{label}</span>
+                <span className="text-purple-500 transition-transform duration-300 group-hover:translate-x-2">
+                  →
+                </span>
+              </a>
+              {index < NAV_LINKS.length - 1 && (
+                <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#7042f840] to-transparent" />
+              )}
+            </React.Fragment>
           ))}
         </nav>
 
-        {/* Profile links – no card box, just icons */}
-        <div className="mt-auto p-6">
-          <div className="flex flex-wrap gap-6 justify-center">
+        {/* Profile links – styled icons */}
+        <div className="mt-auto p-8 border-t border-[#7042f830] bg-[#03001450]">
+          <p className="text-gray-400 text-xs mb-8 text-center uppercase tracking-[0.2em] font-semibold">
+            Connect
+          </p>
+          <div className="flex flex-wrap gap-8 justify-center">
             {Socials.map((social) => (
               <a
                 href={social.href}
@@ -207,14 +217,14 @@ const Navbar = () => {
                 aria-label={social.name}
                 title={social.name}
                 onClick={closeSidebar}
-                className="flex items-center justify-center overflow-hidden w-8 h-8 flex-shrink-0 hover:opacity-80 transition-opacity"
+                className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#7042f810] border border-[#7042f820] hover:border-[#7042f860] hover:bg-[#7042f820] transition-all duration-300 transform hover:scale-110"
               >
                 <Image
                   src={social.src}
                   alt=""
                   width={32}
                   height={32}
-                  className="w-8 h-8 object-contain"
+                  className="w-7 h-7 object-contain"
                 />
               </a>
             ))}
