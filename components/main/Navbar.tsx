@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "About me", href: "#about-me" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
+  { label: "Experience and Achievements", href: "#experience" },
 ];
 
 const Navbar = () => {
