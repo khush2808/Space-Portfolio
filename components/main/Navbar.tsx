@@ -157,14 +157,14 @@ const Navbar = () => {
         aria-hidden={!sidebarOpen}
       />
 
-      {/* Mobile sidebar panel – slides in from left */}
+      {/* Mobile sidebar panel – slides in from right */}
       <aside
         className={`
-          fixed top-0 left-0 z-[70] h-full w-[min(320px,92vw)] 
+          fixed top-0 right-0 z-[70] h-full w-full
           bg-[#030014] shadow-xl
           md:hidden flex flex-col
           transition-transform duration-300 ease-out
-          ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+          ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
         `}
         aria-label="Navigation menu"
         aria-hidden={!sidebarOpen}
