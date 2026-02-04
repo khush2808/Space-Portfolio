@@ -36,11 +36,14 @@ const HeroContent = () => {
             Khush Shah
           </h1>
           </span>
-          
+          <span>
+            {"\n "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               Software Engineer{"\n "}
             </span>
+            {"\n "}
+        </span>
         </motion.div>
 
         {/* <motion.p
