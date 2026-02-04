@@ -90,7 +90,6 @@ const Navbar = () => {
                 height={56}
                 className="cursor-pointer hover:animate-slowspin object-contain"
               />
-              <span className="font-bold text-gray-300">Khush Shah</span>
             </a>
           </div>
 
