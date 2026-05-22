@@ -111,7 +111,7 @@ const Navbar = () => {
           {/* Right: profile icons + mobile menu */}
           <div className="flex flex-row items-center justify-end gap-5">
             {/* Desktop social icons */}
-            <div className="hidden md:flex flex-row items-center gap-4">
+            <div className="hidden lg:flex flex-row items-center gap-4">
               {Socials.map((social) => (
                 <a
                   href={social.href}

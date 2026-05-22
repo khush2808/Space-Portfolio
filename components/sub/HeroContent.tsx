@@ -13,14 +13,14 @@ import Image from "next/image";
 const HeroContent = () => {
   return (
     <div
-      className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-10 px-6 md:px-12 lg:px-20 pt-28 md:pt-32 lg:pt-24 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 px-6 md:px-12 lg:px-20 pt-32 md:pt-36 lg:pt-24 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box mx-auto lg:mx-0 mt-4 md:mt-6 py-2.5 px-4 border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box mx-auto lg:mx-0 mt-4 md:mt-6 max-w-full py-2.5 px-4 border border-[#7042f88b] opacity-[0.9]"
         >
-          <h2 className="Welcome-text text-sm md:text-base font-medium">
+          <h2 className="Welcome-text text-xs sm:text-sm md:text-base font-medium whitespace-normal text-center">
             Intern @ Cisco · ICPC Regionalist · Systems + Full-stack
           </h2>
         </motion.div>
@@ -56,7 +56,7 @@ const HeroContent = () => {
       </div>
 
       <div
-        className="w-full h-full flex justify-center items-center"
+        className="hidden lg:flex w-full h-full justify-center items-center"
       >
         <motion.div variants={slideInFromRight(0.8)}>
           <Image
