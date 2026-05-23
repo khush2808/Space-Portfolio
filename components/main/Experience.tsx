@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { experienceData, educationData, achievementData, leadershipData } from "@/constants";
 
 const Experience = () => {
@@ -21,13 +20,7 @@ const Experience = () => {
         {/* Experience, Achievements, and Education - Side by side on desktop, stacked on mobile */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Experience Section - Left on desktop */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex-1 w-full"
-          >
+          <div className="flex-1 w-full">
             <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               Experience
             </h3>
@@ -66,17 +59,12 @@ const Experience = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column: Achievements and Education stacked */}
           <div className="flex-1 w-full flex flex-col gap-8 lg:gap-12">
             {/* Achievements Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Achievements
               </h3>
@@ -91,15 +79,10 @@ const Experience = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* Education Section - Below Achievements */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Education
               </h3>
@@ -117,15 +100,10 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Leadership & Volunteering Section - Below Education */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Leadership & Volunteering
               </h3>
@@ -149,7 +127,7 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
