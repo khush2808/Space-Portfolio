@@ -19,7 +19,7 @@ const HeroContent = () => {
           <h1 className="Welcome-text text-[36px] md:text-[44px] px-2 pr-4 py-2">
             Khush Shah
           </h1>
-          <span className="text-5xl md:text-7xl lg:text-8xl leading-none lg:whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-amber-300 to-teal-300">
+          <span className="text-4xl md:text-6xl lg:text-7xl leading-none lg:whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-amber-300 to-teal-300">
             Software Engineer
           </span>
         </div>
