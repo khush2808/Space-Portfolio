@@ -127,7 +127,7 @@ const Navbar = () => {
                     alt=""
                     width={36}
                     height={36}
-                    className="w-7 h-7 object-contain"
+                    className={social.iconClassName ?? "w-7 h-7 object-contain"}
                   />
                 </a>
               ))}
@@ -223,7 +223,7 @@ const Navbar = () => {
                   alt=""
                   width={32}
                   height={32}
-                  className="w-8 h-8 object-contain"
+                  className={social.iconClassName ?? "w-8 h-8 object-contain"}
                 />
               </a>
             ))}

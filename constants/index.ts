@@ -104,13 +104,15 @@ export const Socials = [
   },
   {
     name: "CodeChef",
-    src: "/social-codechef.svg",
-    href: "https://www.codechef.com/users/khush2808"
+    src: "/social-codechef-official.svg",
+    href: "https://www.codechef.com/users/khush2808",
+    iconClassName: "w-7 h-7 object-contain brightness-0 invert opacity-90",
   },
   {
     name: "Codolio",
-    src: "/social-codolio.svg",
-    href: "https://codolio.com/profile/khush2808"
+    src: "/social-codolio-official.svg",
+    href: "https://codolio.com/profile/khush2808",
+    iconClassName: "w-7 h-7 object-contain",
   },
 ];
 
