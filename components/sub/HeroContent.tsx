@@ -21,7 +21,7 @@ const HeroContent = () => {
           className="Welcome-box mx-auto lg:mx-0 mt-4 md:mt-6 max-w-full py-2.5 px-4 border border-[#7042f88b] opacity-[0.9]"
         >
           <h2 className="Welcome-text text-xs sm:text-sm md:text-base font-medium whitespace-normal text-center">
-            Intern @ Cisco · ICPC Regionalist · Systems + Full-stack
+            Software Intern at Cisco · Competitive Programmer · Full-stack Developer
           </h2>
         </motion.div>
 

@@ -1,6 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="18" height="18" rx="6" fill="#231F20"/>
-  <path d="M7.4 10.2c.35-1.9 2.1-3.35 4.6-3.35s4.25 1.45 4.6 3.35" stroke="#F6EFE8" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M8.2 11.4c1.2.7 2.45 1.05 3.8 1.05s2.6-.35 3.8-1.05" stroke="#D78137" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M8.5 14.3c1.05 1.5 2.2 2.25 3.5 2.25s2.45-.75 3.5-2.25" stroke="#F6EFE8" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="3" y="3" width="18" height="18" rx="6" fill="#2A1711"/>
+  <path d="M7.1 10.6c.18-2.55 2.2-4.45 4.9-4.45s4.72 1.9 4.9 4.45" fill="#E7C8A6"/>
+  <path d="M8.05 10.15c.78-1.28 2.12-2.04 3.95-2.04s3.17.76 3.95 2.04" stroke="#6F2D22" stroke-width="1.35" stroke-linecap="round"/>
+  <path d="M7.3 11.05h9.4c-.27 4.15-2.02 6.6-4.7 6.6s-4.43-2.45-4.7-6.6Z" fill="#D78137"/>
+  <path d="M8.25 11.6c1.2.66 2.45.99 3.75.99s2.55-.33 3.75-.99" stroke="#FFF4E8" stroke-width="1.35" stroke-linecap="round"/>
+  <path d="M9.15 14.85c.8.86 1.75 1.29 2.85 1.29s2.05-.43 2.85-1.29" stroke="#4C281A" stroke-width="1.35" stroke-linecap="round"/>
 </svg>
