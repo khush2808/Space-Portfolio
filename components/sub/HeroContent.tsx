@@ -2,10 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  slideInFromRight,
-  slideInFromTop,
-} from "@/utils/motion";
+import { slideInFromRight, slideInFromTop } from "@/utils/motion";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
@@ -13,20 +10,11 @@ import Image from "next/image";
 const HeroContent = () => {
   return (
     <div
-      className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 px-6 md:px-12 lg:px-20 pt-32 md:pt-36 lg:pt-24 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 px-6 md:px-12 lg:px-20 pt-40 md:pt-44 lg:pt-36 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-center lg:text-start">
-        <motion.div
-          variants={slideInFromTop}
-          className="Welcome-box mx-auto lg:mx-0 mt-4 md:mt-6 max-w-full py-2.5 px-4 border border-[#7042f88b] opacity-[0.9]"
-        >
-          <h2 className="Welcome-text text-xs sm:text-sm md:text-base font-medium whitespace-normal text-center">
-            Software Intern at Cisco · Competitive Programmer · Full-stack Developer
-          </h2>
-        </motion.div>
-
         <div
-          className="flex flex-col gap-4 mt-4 md:mt-6 text-5xl md:text-6xl font-bold text-white max-w-[680px] w-auto h-auto"
+          className="flex flex-col gap-4 text-5xl md:text-6xl font-bold text-white max-w-[680px] w-auto h-auto"
         >
           <h1 className="Welcome-text text-[36px] md:text-[44px] px-2 pr-4 py-2">
             Khush Shah
