@@ -9,10 +9,10 @@ interface Props {
   description: string;
   link: string;
   github?: string;
-  // technologies?: string[]; // Commented out - not displayed in UI for now
+  technologies?: string[];
 }
 
-const ProjectCard = ({ src, title, description, link, github }: Props) => {
+const ProjectCard = ({ src, title, description, link, github, technologies = [] }: Props) => {
   const githubProfileLink =
     github || "https://github.com/khush2808";
   return (
@@ -36,7 +36,19 @@ const ProjectCard = ({ src, title, description, link, github }: Props) => {
           )}
           <div className="relative p-5">
             <h1 className="text-xl font-semibold text-white tracking-tight">{title}</h1>
-            <p className="mt-2 text-gray-300 text-sm leading-relaxed pr-8 line-clamp-5">{description}</p>
+            <p className="mt-2 text-gray-300 text-sm leading-relaxed pr-8 md:line-clamp-5">{description}</p>
+            {technologies.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2 pr-4">
+                {technologies.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 text-[11px] font-medium text-purple-100"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            )}
             <a
               href={githubProfileLink}
               target="_blank"
