@@ -24,13 +24,13 @@ const ProjectCard = ({ src, title, description, link, github, technologies = [] 
       <div className="relative rounded-xl p-[1px] bg-gradient-to-br from-purple-700/40 via-[#2A0E61]/40 to-cyan-700/40 transition-all duration-300 group-hover:from-purple-500/70 group-hover:to-cyan-500/70 group-hover:shadow-[0_0_25px_-5px_rgba(168,85,247,0.5)]">
         <div className="relative overflow-hidden rounded-[10px] bg-[#060214]/90 backdrop-blur-sm h-full shadow-lg">
           {src && (
-            <div className="overflow-hidden">
+            <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-black/70">
               <Image
                 src={src}
                 alt={title}
                 width={1000}
                 height={1000}
-                className="object-cover w-full h-[250px] transform transition-transform duration-500 group-hover:scale-[1.07]"
+                className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
           )}
