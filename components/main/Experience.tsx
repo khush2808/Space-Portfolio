@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { experienceData, educationData, achievementData, leadershipData } from "@/constants";
 
 const Experience = () => {
@@ -13,7 +12,7 @@ const Experience = () => {
         {/* Main Heading */}
         <div className="w-full flex flex-col items-center mb-12 md:mb-16">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-purple-400 to-cyan-500 py-6 md:py-10 text-center">
-            Experience and Achievements
+            Experience
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2"></div>
         </div>
@@ -21,19 +20,16 @@ const Experience = () => {
         {/* Experience, Achievements, and Education - Side by side on desktop, stacked on mobile */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Experience Section - Left on desktop */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex-1 w-full"
-          >
+          <div className="flex-1 w-full">
             <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               Experience
             </h3>
-            <div className="space-y-8">
+            <div className="space-y-5">
               {experienceData.map((item, idx) => (
-                <div key={idx} className="space-y-2">
+                <div
+                  key={idx}
+                  className="rounded-lg border border-purple-500/20 bg-[#060214]/70 p-5 shadow-lg shadow-purple-950/10"
+                >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <h4 className="text-xl font-semibold text-white">{item.role}</h4>
                     <span className="text-sm text-purple-400 font-medium">{item.period}</span>
@@ -48,26 +44,33 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
+                  {item.technologies && item.technologies.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {item.technologies.map((technology) => (
+                        <span
+                          key={technology}
+                          className="rounded-full border border-cyan-500/25 bg-cyan-500/10 px-2.5 py-1 text-[11px] font-medium text-cyan-100"
+                        >
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column: Achievements and Education stacked */}
           <div className="flex-1 w-full flex flex-col gap-8 lg:gap-12">
             {/* Achievements Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Achievements
               </h3>
               <ul className="space-y-3">
                 {achievementData.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
+                  <li key={idx} className="flex items-start gap-3 rounded-lg border border-purple-500/10 bg-white/[0.02] p-3">
                     <span className="text-purple-400 mt-1">•</span>
                     <div>
                       <span className="text-white font-medium">{item.title}</span>
@@ -76,15 +79,10 @@ const Experience = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* Education Section - Below Achievements */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Education
               </h3>
@@ -102,15 +100,10 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Leadership & Volunteering Section - Below Education */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
                 Leadership & Volunteering
               </h3>
@@ -134,7 +127,7 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

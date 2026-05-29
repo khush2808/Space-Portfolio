@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -16,20 +17,22 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 z-20">
         <ProjectCard
-          src="/portfolio.png"
-          title="My Portfolio"
-          description="A personal portfolio website showcasing my projects, skills, and experiences. Designed to highlight my work in web development and software engineering."
-          link="https://khushshah.vercel.app"
+          src="/claude-code-clone.png"
+          title="Claude Code Clone"
+          description="An AI-powered CLI coding assistant built with Gemini, LangGraph agent workflows, MCP tool integration, PostgreSQL memory, GitHub access, and web search."
+          link="https://github.com/khush2808/claude-code-clone"
           key="1"
-          github="https://github.com/khush2808/space-portfolio"
+          github="https://github.com/khush2808/claude-code-clone"
+          technologies={["Gemini", "LangGraph", "MCP", "PostgreSQL"]}
         />
         <ProjectCard
-          src="/storify.png"
-          title="Storify"
-          description="Storify is a versatile storage app where users can store, rename, delete, share, and organize all types of files. With features like sorting and file management, it makes organizing your digital assets easy and efficient."
-          link="https://storifyy.vercel.app"
+          src="/flyhigh.jpg"
+          title="FlyHigh"
+          description="An event-driven airline management system with Authentication, Flight, Booking, and Reminder microservices. Uses RabbitMQ and Nodemailer for asynchronous notifications."
+          link="https://github.com/khush2808/FlyHigh"
           key="2"
-          github="https://github.com/khush2808/storify"
+          github="https://github.com/khush2808/FlyHigh"
+          technologies={["Node.js", "Express", "RabbitMQ", "MySQL"]}
         />
         <ProjectCard
           src="/syncstream.png"
@@ -38,48 +41,52 @@ const Projects = () => {
           link="https://sync-stream-app.vercel.app/"
           key="3"
           github="https://github.com/khush2808/sync-stream-app"
+          technologies={["Next.js", "Video", "Realtime"]}
         />
         <ProjectCard
-          src="/cryptotracker.png"
-          title="Crypto Tracker"
-          description="A web app to track cryptocurrency prices in real time, with features to view price history and set custom alerts for market changes."
-          link="https://crypto-tracker-khush.vercel.app/"
+          src="/storify.png"
+          title="Storify"
+          description="A storage app where users can store, rename, delete, share, sort, and organize files with a clean file-management workflow."
+          link="https://storifyy.vercel.app"
           key="4"
-          github="https://github.com/khush2808/crypto-tracker-app"
+          github="https://github.com/khush2808/storify"
+          technologies={["Next.js", "Storage", "Auth"]}
+        />
+        <ProjectCard
+          src="/portfolio.png"
+          title="Space Portfolio"
+          description="A responsive portfolio built with Next.js, Tailwind CSS, Framer Motion, and space-themed visual assets to present projects, skills, and experience."
+          link="https://khushshah.vercel.app"
+          key="5"
+          github="https://github.com/khush2808/space-portfolio"
+          technologies={["Next.js", "Tailwind", "Framer Motion"]}
         />
         <ProjectCard
           src="/financemate.png"
           title="FinanceMate"
-          description="A personal finance tool that helps users manage their budgets, track expenses, and visualize spending habits through easy-to-read charts."
+          description="A personal finance tool that helps users manage budgets, track expenses, and visualize spending habits through clear charts."
           link="https://finance-mate.vercel.app/"
-          key="5"
+          key="6"
           github="https://github.com/khush2808/finance-mate"
+          technologies={["React", "Charts", "Finance"]}
+        />
+        <ProjectCard
+          src="/cryptotracker.png"
+          title="Crypto Tracker"
+          description="A web app to track cryptocurrency prices in real time, inspect price history, and monitor market changes."
+          link="https://crypto-tracker-khush.vercel.app/"
+          key="7"
+          github="https://github.com/khush2808/crypto-tracker-app"
+          technologies={["React", "API", "Crypto"]}
         />
         <ProjectCard
           src="/tomato.png"
           title="Tomato - Food Delivery"
-          description="A food delivery app that allows users to browse menus, place orders, and track their food in real time. Offers smooth navigation and user-friendly design."
+          description="A food delivery app for browsing menus, placing orders, and tracking food with a smooth customer-facing flow."
           link="https://food-delivery-frontend-no0l.onrender.com/"
-          key="6"
-          github="https://github.com/khush2808/zomato-clone"
-        />
-        <ProjectCard
-          src="/claude-code-clone.png"
-          title="Claude Code Clone"
-          description="An AI-powered CLI coding assistant built with Gemini 2.5 Flash, LangGraph for agent workflows, and MCP for tool integration. Features filesystem operations, GitHub integration, web search, and conversation memory with PostgreSQL."
-          link="https://github.com/khush2808/claude-code-clone"
-          key="7"
-          github="https://github.com/khush2808/claude-code-clone"
-          // technologies={["Gemini 2.5 Flash", "LangGraph", "MCP", "PostgreSQL"]}
-        />
-        <ProjectCard
-          src="/flyhigh.jpg"
-          title="FlyHigh"
-          description="Asynchronous event based architecture for an Airline Management System. Developed four microservices: Authentication, Flight, Booking, and Reminder services to handle specific tasks within the system. Each service was designed to optimize functionality and maintain separation of concerns. Created a Reminder service using Nodemailer and RabbitMQ to send email alerts and updates."
-          link="https://github.com/khush2808/FlyHigh"
           key="8"
-          github="https://github.com/khush2808/FlyHigh"
-          // technologies={["NodeJS", "ExpressJS", "Sequelize", "RabbitMQ", "MySQL", "Nodemailer"]}
+          github="https://github.com/khush2808/zomato-clone"
+          technologies={["React", "Node.js", "MongoDB"]}
         />
         <div className="col-span-full flex flex-col items-center space-y-4 mt-4">
           <p className="text-center text-gray-500 text-sm max-w-2xl">
@@ -92,7 +99,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-2 border border-purple-600/40 text-purple-300 hover:bg-purple-600/10 transition"
             >
-              <img src="/github.svg" alt="GitHub" className="w-4 h-4 opacity-80" />
+              <Image src="/github.svg" alt="" width={16} height={16} className="opacity-80" />
               View All Repos
             </a>
             <a

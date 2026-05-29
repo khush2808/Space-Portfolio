@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "About me", href: "#about-me" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience and Achievements", href: "#experience" },
+  { label: "Experience", href: "#experience" },
 ];
 
 const Navbar = () => {
@@ -75,7 +75,7 @@ const Navbar = () => {
           translate-y-0
         `}
       >
-        <div className="w-full h-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-12 md:grid md:grid-cols-3">
+        <div className="w-full h-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-12 lg:grid lg:grid-cols-3">
           {/* Left: logo + name */}
           <div className="flex flex-row items-center justify-start h-auto w-auto">
             <a
@@ -94,7 +94,7 @@ const Navbar = () => {
           </div>
 
           {/* Center: nav links */}
-          <nav className="hidden md:flex flex-row items-center justify-center">
+          <nav className="hidden lg:flex flex-row items-center justify-center">
             <div className="flex items-center gap-1 rounded-full border border-[#7042f861] bg-[#0300145e] px-5 py-2.5">
               {NAV_LINKS.map(({ label, href }) => (
                 <a
@@ -102,7 +102,7 @@ const Navbar = () => {
                   href={href}
                   className="rounded-full px-4 py-2 text-gray-200 hover:bg-[#7042f82a] transition-colors"
                 >
-                  {label === "Experience and Achievements" ? "Experience" : label}
+                  {label}
                 </a>
               ))}
             </div>
@@ -111,7 +111,7 @@ const Navbar = () => {
           {/* Right: profile icons + mobile menu */}
           <div className="flex flex-row items-center justify-end gap-5">
             {/* Desktop social icons */}
-            <div className="hidden md:flex flex-row items-center gap-4">
+            <div className="hidden lg:flex flex-row items-center gap-4">
               {Socials.map((social) => (
                 <a
                   href={social.href}
@@ -127,7 +127,7 @@ const Navbar = () => {
                     alt=""
                     width={36}
                     height={36}
-                    className="w-7 h-7 object-contain"
+                    className={social.iconClassName ?? "w-7 h-7 object-contain"}
                   />
                 </a>
               ))}
@@ -137,7 +137,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
+              className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-white hover:bg-white/15 transition-colors flex-shrink-0 border border-[#7042f861]"
               aria-label="Open menu"
             >
               <Bars3Icon className="w-7 h-7" strokeWidth={2} />
@@ -151,7 +151,7 @@ const Navbar = () => {
         role="presentation"
         className={`
           fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm
-          md:hidden transition-opacity duration-300
+          lg:hidden transition-opacity duration-300
           ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
         `}
         onClick={closeSidebar}
@@ -163,7 +163,7 @@ const Navbar = () => {
         className={`
           fixed top-0 right-0 z-[70] h-full w-full
           bg-[#030014] bg-opacity-95 backdrop-blur-xl
-          md:hidden flex flex-col
+          lg:hidden flex flex-col
           transition-transform duration-500 ease-in-out
           ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
         `}
@@ -223,7 +223,7 @@ const Navbar = () => {
                   alt=""
                   width={32}
                   height={32}
-                  className="w-8 h-8 object-contain"
+                  className={social.iconClassName ?? "w-8 h-8 object-contain"}
                 />
               </a>
             ))}
