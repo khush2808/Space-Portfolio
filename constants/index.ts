@@ -87,13 +87,13 @@ export const Socials = [
     href: 'https://www.linkedin.com/in/khush2808/',
   },
   {
-    name: "Github",
+    name: "GitHub",
     src: "/social-github.svg",
     href:'https://github.com/khush2808',
 
   },
   {
-    name: "Leetcode",
+    name: "LeetCode",
     src: "/social-leetcode.svg",
     href:"https://leetcode.com/u/khushicpc/"
   },

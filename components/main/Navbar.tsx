@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "About me", href: "#about-me" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience and Achievements", href: "#experience" },
+  { label: "Experience", href: "#experience" },
 ];
 
 const Navbar = () => {
@@ -102,7 +102,7 @@ const Navbar = () => {
                   href={href}
                   className="rounded-full px-4 py-2 text-gray-200 hover:bg-[#7042f82a] transition-colors"
                 >
-                  {label === "Experience and Achievements" ? "Experience" : label}
+                  {label}
                 </a>
               ))}
             </div>
