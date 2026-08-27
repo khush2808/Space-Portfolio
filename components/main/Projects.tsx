@@ -40,30 +40,6 @@ const Projects = () => {
           github="https://github.com/khush2808/sync-stream-app"
         />
         <ProjectCard
-          src="/cryptotracker.png"
-          title="Crypto Tracker"
-          description="A web app to track cryptocurrency prices in real time, with features to view price history and set custom alerts for market changes."
-          link="https://crypto-tracker-khush.vercel.app/"
-          key="4"
-          github="https://github.com/khush2808/crypto-tracker-app"
-        />
-        <ProjectCard
-          src="/financemate.png"
-          title="FinanceMate"
-          description="A personal finance tool that helps users manage their budgets, track expenses, and visualize spending habits through easy-to-read charts."
-          link="https://finance-mate.vercel.app/"
-          key="5"
-          github="https://github.com/khush2808/finance-mate"
-        />
-        <ProjectCard
-          src="/tomato.png"
-          title="Tomato - Food Delivery"
-          description="A food delivery app that allows users to browse menus, place orders, and track their food in real time. Offers smooth navigation and user-friendly design."
-          link="https://food-delivery-frontend-no0l.onrender.com/"
-          key="6"
-          github="https://github.com/khush2808/zomato-clone"
-        />
-        <ProjectCard
           src="/claude-code-clone.png"
           title="Claude Code Clone"
           description="An AI-powered CLI coding assistant built with Gemini 2.5 Flash, LangGraph for agent workflows, and MCP for tool integration. Features filesystem operations, GitHub integration, web search, and conversation memory with PostgreSQL."
