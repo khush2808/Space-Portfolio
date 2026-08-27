@@ -282,6 +282,25 @@ export interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
   {
+    role: "Software Engineer",
+    company: "Cisco",
+    period: "Aug 2026 - Present",
+    summary: "Bengaluru, Karnataka, India · On-site",
+    highlights: [
+      "Working in the Optical Networking Team"
+    ],
+  },
+  {
+    role: "Software Engineering Intern",
+    company: "Cisco",
+    period: "Mar 2026 - Jul 2026",
+    summary: "Bengaluru, Karnataka, India · On-site",
+    highlights: [
+      "Working with XR operating system and developing embedded software for Line Cards.",
+      "Implemented robust unit testing suites using CMocka to validate hardware-software interfaces."
+    ],
+  },
+  {
     role: "SDE Intern",
     company: "HexaWealth",
     period: "Jan 2026 - Present",
