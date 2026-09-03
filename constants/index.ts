@@ -303,7 +303,7 @@ export const experienceData: ExperienceItem[] = [
   {
     role: "SDE Intern",
     company: "HexaWealth",
-    period: "Jan 2026 - Present",
+    period: "Jan 2026 - Feb 2026",
     summary: "Hyderabad, Telangana, India · On-site",
     highlights: [
       "Building a wealth advisory and management platform with FastAPI, Azure and React Native",
@@ -314,7 +314,7 @@ export const experienceData: ExperienceItem[] = [
   {
     role: "SDE Intern",
     company: "Futures First",
-    period: "Oct 2025 - Jan 2026",
+    period: "Oct 2025 - Dec 2025",
     summary: "Jaipur, Rajasthan, India · On-site",
     highlights: [
       "Contributed across 3 repositories, merging 20+ pull requests and delivering 10k+ lines of production code across frontend and backend systems",
