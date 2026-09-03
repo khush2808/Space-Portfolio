@@ -306,8 +306,10 @@ export const experienceData: ExperienceItem[] = [
     period: "Jan 2026 - Feb 2026",
     summary: "Hyderabad, Telangana, India · On-site",
     highlights: [
-      "Building a wealth advisory and management platform with FastAPI, Azure and React Native",
-      "Integrating third party account aggregators APIs such as FinFactor(Finvu) and MFCentral to fetch, sync and manage customer's assets"
+      "Building a wealth advisory and management platform with FastAPI, Azure, and React Native.",
+      "Integrating third-party account aggregator APIs such as FinFactor (Finvu) and MFCentral to fetch, sync, and manage client assets.",
+      "Implemented push notification pipelines in cron jobs with the help of Expo Push APIs and Notifications SDK to notify users about their pending actions.",
+      "Got to work with really amazing people."
     ],
     // technologies: ["FastAPI", "Azure", "React Native", "FinFactor", "MFCentral"]
   },
