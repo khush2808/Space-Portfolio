@@ -24,22 +24,6 @@ const Projects = () => {
           github="https://github.com/khush2808/space-portfolio"
         />
         <ProjectCard
-          src="/storify.png"
-          title="Storify"
-          description="Storify is a versatile storage app where users can store, rename, delete, share, and organize all types of files. With features like sorting and file management, it makes organizing your digital assets easy and efficient."
-          link="https://storifyy.vercel.app"
-          key="2"
-          github="https://github.com/khush2808/storify"
-        />
-        <ProjectCard
-          src="/syncstream.png"
-          title="SyncStream"
-          description="SyncStream is a video calling platform enabling seamless virtual meetings with features like screen sharing, chat, and secure video calls."
-          link="https://sync-stream-app.vercel.app/"
-          key="3"
-          github="https://github.com/khush2808/sync-stream-app"
-        />
-        <ProjectCard
           src="/claude-code-clone.png"
           title="Claude Code Clone"
           description="An AI-powered CLI coding assistant built with Gemini 2.5 Flash, LangGraph for agent workflows, and MCP for tool integration. Features filesystem operations, GitHub integration, web search, and conversation memory with PostgreSQL."
@@ -88,6 +72,9 @@ const Projects = () => {
               Resume
             </a>
           </div>
+          <p className="text-center text-gray-400 text-sm leading-6 max-w-3xl mt-6">
+            I have about 10-20 small and big projects on my github. I don&apos;t maintain the list of my projects properly here. All I want you to know if you are a recruiter is that I am incredibly skilled because I have worked with many different tech stacks and frameworks in all my work experiences and personal curiosity ai projects as well and I go very deep into problems while caring about the end product requirements. See ya :)
+          </p>
         </div>
 
       </div>
